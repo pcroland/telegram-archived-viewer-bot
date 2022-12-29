@@ -3,10 +3,12 @@
 import toml
 from telethon import TelegramClient, utils, types, events
 
+
 config = toml.load("config.toml")
 
 client = TelegramClient(config["phone_number"], config["api_id"], config["api_hash"])
 client.start()
+
 
 async def main():
     archived = set()
